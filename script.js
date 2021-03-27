@@ -107,3 +107,17 @@ function getMealsLS() {
 
     return mealIds === null ? [] : mealIds;
 }
+
+async function fetchFavMeals() {
+    // clean the container
+    favoriteContainer.innerHTML = "";
+
+    const mealIds = getMealsLS();
+
+    for (let i = 0; i < mealIds.length; i++) {
+        const mealId = mealIds[i];
+        meal = await getMealById(mealId);
+
+        addMealFav(meal);
+    }
+}

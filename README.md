@@ -1,6 +1,7 @@
 # Recipe
 
-Recipe add created with HTML, CSS, and vanilla Javascript.
+Recipe app created with HTML, CSS, vanilla Javascript, and Themealdb API.
+
 Deployed with Vercel at https://recipe-mu.vercel.app/
 
 Features:

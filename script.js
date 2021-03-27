@@ -7,6 +7,9 @@ const popupCloseBtn = document.getElementById("close-popup");
 const searchTerm = document.getElementById("search-term");
 const searchBtn = document.getElementById("search");
 
+getRandomMeal();
+fetchFavMeals();
+
 async function getRandomMeal() {
     const resp = await fetch(
         "https://www.themealdb.com/api/json/v1/1/random.php"
@@ -209,4 +212,8 @@ searchBtn.addEventListener("click", async () => {
             addMeal(meal);
         });
     }
+});
+
+popupCloseBtn.addEventListener("click", () => {
+    mealPopup.classList.add("hidden");
 });
